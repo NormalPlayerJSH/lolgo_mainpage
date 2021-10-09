@@ -1,0 +1,40 @@
+.fullDiv {
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(#425cea33,#425cea33,#425cea33,#425cea33,#ba565733,#ba565733,#ba565733,#ba565733);*/
+  font-size: 20rem;
+  flex-direction: column;
+}
+
+.objectDiv {
+  width: 100%;
+  height: 20%;
+  background: #000;
+}
+
+.objectEachDiv {
+  width: 100%;
+  height: 100%;
+  border: solid white 2rem;
+}
+
+.tooltip {
+  width: 280rem;
+  background: #e4e4e4;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tooltipText {
+  padding: 10rem;
+}
+
+.highlight {
+  background: gold;
+}
+
+.tooltipEventDiv {
+  width: 100%;
+  background: #191c20;
+  flex-wrap: wrap;
+}
