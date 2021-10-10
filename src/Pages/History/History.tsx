@@ -27,7 +27,7 @@ export default function History(
     (async () => {
       try {
         const res = await axios.post<any, AnalyInterface>(
-          "http://api.lolgo.gg/analyrequest",
+          "https://api.lolgo.gg/analyrequest",
           {
             matchId: gameId,
           }

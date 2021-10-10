@@ -8,7 +8,7 @@ import { logoFull } from '../../Meta/logo';
 function Welcome() {
     const [TextInput, inputValue] = useTextInput({
       className: styles.joinInput,
-      innerText: "리그 오브 레전드 게임코드 (10자리 숫자)를 입력해주세요",
+      innerText: "리그 오브 레전드 매치 ID (10자리 숫자)를 입력해주세요",
       onEnter: (event) => {
         if (inputValue.trim().length !== 0) join();
       },
