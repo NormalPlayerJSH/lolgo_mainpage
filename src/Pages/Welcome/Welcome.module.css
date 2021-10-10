@@ -8,7 +8,7 @@
   height: 10%;
   margin-top: 8%;
   justify-content: space-around;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .joinInput {
@@ -22,6 +22,27 @@
 }
 
 .logoImg {
-  height: 300rem;
-  padding-bottom: 100rem;
+  height: 200rem;
+  padding-bottom: 0rem;
+}
+
+.recommendText {
+  font-size: 35rem;
+  color: white;
+}
+
+.recommendListDiv {
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 10rem;
+}
+
+.recommendLink {
+  font-size: 20rem;
+  color: orange;
+}
+
+.adDiv {
+  width: 100%;
+  margin-top: 20rem;
 }
