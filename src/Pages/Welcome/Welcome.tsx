@@ -39,7 +39,7 @@ function Welcome() {
             <div className={styles.inputNBtn}>
               {TextInput}
               <Button className={styles.joinBtn} onClick={join}>
-                입장하기
+                분석하기
               </Button>
             </div>
             <div className={styles.recommendText}>추천 게임 리스트</div>
