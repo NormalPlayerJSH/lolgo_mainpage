@@ -8,14 +8,15 @@ export default function Header() {
       <div id={styles.headerInner}>
         <img src={logoInline} alt="" id={styles.headerLogo} onClick={()=>{window.location.href='/'}}/>
         <div className={styles.navLinks}>
-          <div
+          <a
+            href='https://banpick.lolgo.gg'
             className={`${styles.navLink} ${styles.navText}`}
-            onClick={() => {
-              window.location.href='https://banpick.lolgo.gg';
-            }}
+            // onClick={() => {
+            //   window.location.href='https://banpick.lolgo.gg';
+            // }}
           >
             Banpick Tool
-          </div>
+          </a>
         </div>
       </div>
     </div>
