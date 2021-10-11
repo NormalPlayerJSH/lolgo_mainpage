@@ -43,3 +43,14 @@ header {
     font-size: 0.04861108vw;
   }
 }
+
+@media screen and (max-width:1000px) {
+  #full {
+    width: 1000px;
+    flex-shrink: 0;
+  }
+
+  html {
+    font-size: 0.69444px;
+  }
+}
