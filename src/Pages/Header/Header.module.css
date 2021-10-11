@@ -9,9 +9,25 @@
   width: 85%;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 #headerLogo {
   height: 65.7%;
   cursor: pointer;
+}
+
+.navText {
+  color: white;
+  padding-top: 0.7rem;
+  font-size: 30rem;
+}
+
+.navLink {
+  padding-left: 20rem;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: orange;
 }
