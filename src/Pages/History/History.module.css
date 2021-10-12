@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #topperDiv {
@@ -25,4 +26,37 @@
 #mapDiv {
   width: 30%;
   height: 100%;
+}
+
+@media screen and (max-width:1000px) {
+  #historyDiv {
+    flex-direction: row;
+    row-gap: 30rem;
+  }  
+  #topperDiv {
+    flex-direction: column;
+    height: 170%;
+    flex-wrap: nowrap;
+    row-gap: 30rem;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .teamInfoDiv {
+    width: 100%;
+    height: 25%;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  #mapDiv {
+    width: 100%;
+    height: 50%;
+    flex-shrink: 0;
+  }
+  
+  #graphDiv {
+    height: 40%;
+    flex-shrink: 0;
+  }
 }

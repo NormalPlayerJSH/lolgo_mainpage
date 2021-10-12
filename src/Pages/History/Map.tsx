@@ -17,7 +17,7 @@ const redColor = '#ba5657';
 
 const {
   towerIcon, baronIcon, heraldIcon, inhibitorIcon, dragonIcon,
-} = getIcons(`${(halfObjectLength * 2) - 3}rem`);
+} = getIcons(`${(halfObjectLength * 2) - 3}em`);
 
 function Map(props:{
   data: AnalyInterface,
@@ -79,10 +79,10 @@ function Map(props:{
       <div
         className={`${styles.dotOnMap} ${typeToClass[type]}`}
         style={{
-          left: `${left}rem`,
-          bottom: `${bottom}rem`,
-          width: `${halfLength * 2}rem`,
-          height: `${halfLength * 2}rem`,
+          left: `${left}em`,
+          bottom: `${bottom}em`,
+          width: `${halfLength * 2}em`,
+          height: `${halfLength * 2}em`,
           background: `${bgColor}`,
         }}
       >
@@ -98,7 +98,7 @@ function Map(props:{
       </div>
       <div className={styles.historyAd} id="historyAd">
       </div>
-      <div className={`${styles.squareDiv} ${frame === -1 ? styles.allDot : ''}`} style={{ width: `${squareLength}rem`, height: `${squareLength}rem` }}>
+      <div className={`${styles.squareDiv} ${frame === -1 ? styles.allDot : ''}`} style={{ width: `${squareLength}em`, height: `${squareLength}em` }}>
         <img src={mapImg} alt="" className={styles.mapImg} />
         {data.killData[frame].map(
           (eachData) => (

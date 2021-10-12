@@ -6,6 +6,7 @@
   align-items: center;
   overflow: visible;
   flex-wrap: nowrap;
+  row-gap: 10rem;
 }
 
 .closeDiv {
@@ -59,6 +60,14 @@
 }
 
 .historyAd {
-  width: 323px;
-  height: 53px;
+  width: 322px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:1000px) {
+  .squareDiv {
+    font-size: 2rem;
+  }
 }

@@ -35,6 +35,8 @@
   width: 100%;
   justify-content: space-around;
   padding-top: 10rem;
+  flex-wrap: wrap;
+  column-gap: 10rem;
 }
 
 .recommendLink {

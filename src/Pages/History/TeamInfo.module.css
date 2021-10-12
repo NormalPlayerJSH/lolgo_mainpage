@@ -51,6 +51,9 @@
 
 .playerChampImgInner {
   height: 100%;
+  width: auto;
+  min-width: none;
+  min-height: none;
   border: solid;
   border-radius: 50%;
   border-color: #888889;
@@ -61,6 +64,8 @@
 .playerChampImgImg {
   width: auto;
   height: 100%;
+  min-width: none;
+  min-height: none ;
   transform: scale(1.15);
 }
 
@@ -121,4 +126,77 @@
   width: 33rem;
   height: 33rem;
   border-radius: 10rem;
+}
+
+
+@media screen and (max-width:1000px) {
+  
+.playerChampImg {
+  width: 20%;
+  overflow: hidden;
+}
+
+.playerChampImgInner {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+
+.playerKDA,
+.playerGold {
+  font-size: 40rem;
+}
+
+.playerKDA {
+  width: 10%;
+}
+
+.playerGold {
+  width: 25%;
+}
+
+.playerItems {
+  width: 60%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.playerChampImgImg {
+  width: auto;
+  height: 100%;
+  min-width: none;
+  min-height: none ;
+  transform: none;
+}
+.normalItems {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.normalItemsOneLine {
+  width: 100%;
+  height: 80%;
+  column-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemTop {
+  align-items: center;
+}
+
+.itemBottom {
+  align-items: center;
+}
+
+.eachItemImg {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 10rem;
+}
+
+
 }
