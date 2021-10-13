@@ -6,20 +6,26 @@ import useTextInput from "../../Common/TextInput/TextInput";
 import { logoFull } from '../../Meta/logo';
 
 function Welcome() {
-  // useEffect(() => {
-  //   (document.getElementById('mainAd') as Element).innerHTML=`
-  //   <ins class="kakao_ad_area" style="display:none;" 
-  //   data-ad-unit    = "DAN-sgqN0cmPrUaAQrC6" 
-  //   data-ad-width   = "728" 
-  //   data-ad-height  = "90"
-  //   data-ad-onfail   = "noad"></ins>
-  //   `;
-  //   let scr = document.createElement('script');
-  //   scr.type='text/javascript';
-  //   scr.async=true;
-  //   scr.src="//t1.daumcdn.net/kas/static/ba.min.js";
-  //   (document.getElementById('mainAd') as Element).appendChild(scr)
-  // }, [])
+  useEffect(() => {
+    (document.getElementById('mainWideAd') as Element).innerHTML=`
+    <ins class="kakao_ad_area" style="display:none;" 
+    data-ad-unit    = "DAN-Idda7Hj8DNO1VZ9S" 
+    data-ad-width   = "728" 
+    data-ad-height  = "90"
+    data-ad-onfail   = "noad"></ins>
+    `;
+    (document.getElementById('mainMobileAd') as Element).innerHTML=`
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-XJINJfNMrQpkWMAl" 
+ data-ad-width   = "300" 
+ data-ad-height  = "250"></ins> 
+    `;
+    let scr = document.createElement('script');
+    scr.type='text/javascript';
+    scr.async=true;
+    scr.src="//t1.daumcdn.net/kas/static/ba.min.js";
+    (document.getElementById('mainWideAd') as Element).appendChild(scr)
+  }, [])
     const [TextInput, inputValue] = useTextInput({
       className: styles.joinInput,
       innerText: "리그 오브 레전드 매치 ID (10자리 숫자)를 입력해주세요",
@@ -54,7 +60,9 @@ function Welcome() {
                   ))
               }
             </div>
-            <div className={styles.adDiv} id='mainAd'>
+            <div className={styles.adWideDiv} id='mainWideAd'>
+            </div>
+            <div className={styles.adMobileDiv} id='mainMobileAd'>
             </div>
           </div>
         </div>

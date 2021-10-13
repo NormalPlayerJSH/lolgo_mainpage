@@ -44,7 +44,22 @@
   color: orange;
 }
 
-.adDiv {
+.adWideDiv {
   width: 100%;
   margin-top: 20rem;
+}
+
+.adMobileDiv {
+  width: 100%;
+  display: none;
+  margin-top: 20rem;
+}
+
+@media screen and (max-width:1000px) {
+  .adWideDiv {
+    display: none;
+  }
+  .adMobileDiv {
+    display: flex;
+  }
 }

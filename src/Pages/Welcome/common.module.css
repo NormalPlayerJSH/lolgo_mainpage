@@ -19,3 +19,9 @@
   color: #eaeaea;
   font-weight: 800;
 }
+
+@media screen and (max-width:1000px) {
+  .inner {
+    width: 90%;
+  }
+}
