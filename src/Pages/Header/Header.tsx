@@ -11,11 +11,14 @@ export default function Header() {
           <a
             href='https://banpick.lolgo.gg'
             className={`${styles.navLink} ${styles.navText}`}
-            // onClick={() => {
-            //   window.location.href='https://banpick.lolgo.gg';
-            // }}
           >
             Banpick Tool
+          </a>
+          <a
+            href='https://cdn.lolgo.gg/desktop/win/LOLGO_install_0.3.0.exe'
+            className={`${styles.navLink} ${styles.navText}`}
+          >
+            데스크탑 앱 다운로드
           </a>
         </div>
       </div>
