@@ -15,7 +15,7 @@ export default function Header() {
             Banpick Tool
           </a>
           <a
-            href='https://cdn.lolgo.gg/desktop/win/LOLGO_install_0.3.0.exe'
+            href='/download'
             className={`${styles.navLink} ${styles.navText}`}
           >
             데스크탑 앱 다운로드

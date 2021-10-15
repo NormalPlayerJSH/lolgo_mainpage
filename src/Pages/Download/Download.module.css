@@ -1,0 +1,94 @@
+a {
+  text-decoration: none;
+}
+
+.joinContent {
+  font-size: 3rem;
+  color: #eaeaea;
+}
+
+.inputNBtn {
+  width: 100%;
+  height: 10%;
+  margin-top: 8%;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.joinInput {
+  width: 70%;
+}
+
+.joinBtn {
+  width: 20%;
+  height: 100%;
+  font-size: 30rem;
+}
+
+.logoImg {
+  height: 200rem;
+  padding-bottom: 0rem;
+}
+
+.findMatchIdBtn {
+  font-size: 30rem;
+  padding: 30rem;
+  color: black;
+}
+
+.recommendText {
+  font-size: 35rem;
+  color: white;
+}
+
+.recommendListDiv {
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 10rem;
+  flex-wrap: wrap;
+  column-gap: 10rem;
+}
+
+.recommendLink {
+  font-size: 20rem;
+  color: orange;
+}
+
+.adWideDiv {
+  width: 100%;
+  margin-top: 20rem;
+}
+
+.adMobileDiv {
+  width: 100%;
+  display: none;
+  margin-top: 20rem;
+}
+
+@media screen and (max-width:1000px) {
+  .adWideDiv {
+    display: none;
+  }
+  .adMobileDiv {
+    display: flex;
+  }
+}
+
+.buttonsDiv {
+  flex-direction: row;
+  column-gap: 20rem;
+  margin-top: 20rem;
+}
+
+.platformLogo {
+  width: 50rem;
+  height: 50rem;
+}
+
+.windowsSvg {
+  margin-right: 20rem;
+}
+
+.appleSvg {
+  margin-right: 10rem;
+}
