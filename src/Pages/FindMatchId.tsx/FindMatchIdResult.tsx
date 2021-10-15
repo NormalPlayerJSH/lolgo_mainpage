@@ -29,7 +29,7 @@ function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
     scr.async=true;
     scr.src="//t1.daumcdn.net/kas/static/ba.min.js";
     (document.getElementById('mainWideAd') as Element).appendChild(scr)
-    const res = axios.post<any,any>('https://api.lolgo.gg/summonrequest',{summonerName:nickname})
+    const res = axios.get<any>(`https://api.lolgo.gg/summonrequest/${nickname}`)
     res.then((data)=>{setMatchList(data.data)})
   }, [])
     const [TextInput, inputValue] = useTextInput({

@@ -26,11 +26,8 @@ export default function History(
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.post<any, AnalyInterface>(
-          "https://api.lolgo.gg/analyrequest",
-          {
-            matchId: gameId,
-          }
+        const res = await axios.get<any>(
+          `https://api.lolgo.gg/analyrequest/${gameId}`
         );
         // const res = await axios.post<any,AnalyInterface>('/analyrequest', {
         //   matchId: gameId,
