@@ -92,3 +92,8 @@ a {
 .appleSvg {
   margin-right: 10rem;
 }
+
+.versionDiv {
+  font-size: 30rem;
+  color: white;
+}

@@ -40,6 +40,9 @@ function Download() {
           <div className={common.inner}>
               <img src={logoFull} alt=""  className={styles.logoImg}/>
             <div className={common.mainTitle}>데스크탑 앱 다운로드</div>
+            <div className={styles.versionDiv}>
+              최신버전: {version}
+            </div>
             <div className={styles.buttonsDiv}>
               <a href={`https://cdn.lolgo.gg/desktop/win/LOLGO_install_${version}.exe`}>
                 <Button className={styles.findMatchIdBtn}>
