@@ -22,6 +22,7 @@ const addNickname = (nickname:string) => {
 function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
   const {nickname} = RCProps.match.params
   const [matchList, setMatchList] = useState<string[]>([])
+  const [realNickname, setRealNickname] = useState('')
   useEffect(() => {
     (document.getElementById('mainWideAd') as Element).innerHTML=`
     <ins class="kakao_ad_area" style="display:none;" 
@@ -44,8 +45,10 @@ function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
     const res = axios.get<any>(`https://api.lolgo.gg/summonrequest/${nickname}`)
     res.then((data)=>{
       if(data.data===false) window.location.href = "/error/존재하지 않는 닉네임입니다.";
-      setMatchList(data.data)
-      addNickname(nickname);
+      const {summonerName, matches} = data.data;
+      setMatchList(matches)
+      setRealNickname(summonerName)
+      addNickname(summonerName);
     })
   }, [])
     const [TextInput, inputValue] = useTextInput({
@@ -64,7 +67,7 @@ function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
         <div className={common.div}>
           <div className={common.inner}>
               <img src={logoFull} alt=""  className={styles.logoImg}/>
-            <div className={common.mainTitle}>내 매치 ID 찾기</div>
+            <div className={common.mainTitle}>{realNickname===''?"내 매치 ID 찾기":`${realNickname}의 매치 ID`}</div>
             <div className={styles.matchListDiv}>
               {matchList.map(matchId=><a href={`/analyze/${matchId}`} className={styles.matchIdDiv}>
                 {matchId}
