@@ -73,7 +73,7 @@ function FindMatchId() {
             {
               recentNick.length>0?
               <><div className={styles.recommendText}>
-                최근 검색 소환사명
+                최근 검색 소환사명 (최근 20개)
               </div>
             <div className={styles.recommendListDiv}>
               {

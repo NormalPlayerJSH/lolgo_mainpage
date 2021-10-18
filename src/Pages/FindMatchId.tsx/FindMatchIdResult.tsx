@@ -16,7 +16,7 @@ const addNickname = (nickname:string) => {
     newItem = newItem.slice(0,nickIndex).concat(newItem.slice(nickIndex+1))
   }
   newItem = [nickname, ...newItem];
-  window.localStorage.setItem(storageKey.lolgoNickname,JSON.stringify(newItem));
+  window.localStorage.setItem(storageKey.lolgoNickname,JSON.stringify(newItem.slice(0,20)));
 }
 
 function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
