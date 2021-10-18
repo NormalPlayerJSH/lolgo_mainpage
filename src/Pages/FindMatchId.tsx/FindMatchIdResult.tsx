@@ -6,6 +6,18 @@ import useTextInput from "../../Common/TextInput/TextInput";
 import { logoFull } from '../../Meta/logo';
 import { RouteComponentProps } from 'react-router';
 import axios from 'axios';
+import { storageKey } from '../../types/enum';
+
+const addNickname = (nickname:string) => {
+  const nowItem = window.localStorage.getItem(storageKey.lolgoNickname)
+  let newItem:string[] = nowItem?JSON.parse(nowItem):[];
+  const nickIndex = newItem.indexOf(nickname);
+  if(nickIndex!==-1){
+    newItem = newItem.slice(0,nickIndex).concat(newItem.slice(nickIndex+1))
+  }
+  newItem = [nickname, ...newItem];
+  window.localStorage.setItem(storageKey.lolgoNickname,JSON.stringify(newItem));
+}
 
 function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
   const {nickname} = RCProps.match.params
@@ -30,7 +42,11 @@ function FindMatchIdResult(RCProps: RouteComponentProps<{ nickname: string }>) {
     scr.src="//t1.daumcdn.net/kas/static/ba.min.js";
     (document.getElementById('mainWideAd') as Element).appendChild(scr)
     const res = axios.get<any>(`https://api.lolgo.gg/summonrequest/${nickname}`)
-    res.then((data)=>{setMatchList(data.data)})
+    res.then((data)=>{
+      if(data.data===false) window.location.href = "/error/존재하지 않는 닉네임입니다.";
+      setMatchList(data.data)
+      addNickname(nickname);
+    })
   }, [])
     const [TextInput, inputValue] = useTextInput({
       className: styles.joinInput,

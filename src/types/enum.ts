@@ -4,6 +4,10 @@ export enum LCUEvents{
   NeedLCU='NeedLCU',
 }
 
+export enum storageKey {
+  lolgoNickname = 'lolgoNickname'
+}
+
 export enum GameFlow{
   None,
   Lobby,

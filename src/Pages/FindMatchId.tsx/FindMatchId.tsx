@@ -1,12 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Welcome.module.css";
 import common from "./common.module.css";
 import Button from "../../Common/Button/Button";
 import useTextInput from "../../Common/TextInput/TextInput";
 import { logoFull } from '../../Meta/logo';
+import { storageKey } from '../../types/enum';
 
 function FindMatchId() {
+  const [recentNick, setRecentNick] = useState<string[]>([]);
   useEffect(() => {
+    const recent = window.localStorage.getItem(storageKey.lolgoNickname);
+    if(recent){
+      const recentList:string[] = JSON.parse(recent);
+      setRecentNick(recentList);
+      console.log(recentList)
+    }
     (document.getElementById('mainWideAd') as Element).innerHTML=`
     <ins class="kakao_ad_area" style="display:none;" 
     data-ad-unit    = "DAN-Idda7Hj8DNO1VZ9S" 
@@ -48,6 +56,20 @@ function FindMatchId() {
                 검색하기
               </Button>
             </div>
+            {
+              recentNick.length>0?
+              <><div className={styles.recommendText}>
+                최근 검색 소환사명
+              </div>
+            <div className={styles.recommendListDiv}>
+              {
+                recentNick.map((gameNum)=>(
+                    <a href={`/findmatchid/${gameNum}`} className={styles.recommendLink}>{gameNum}</a>
+                  ))
+              }
+            </div></>:
+            <></>
+            }
             <div className={styles.adWideDiv} id='mainWideAd'>
             </div>
             <div className={styles.adMobileDiv} id='mainMobileAd'>
