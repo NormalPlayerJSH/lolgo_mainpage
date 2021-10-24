@@ -11,7 +11,7 @@ const appleSvg = <svg className={`${styles.appleSvg} ${styles.platformLogo}`} vi
 const windowsSvg = <svg className={`${styles.windowsSvg} ${styles.platformLogo}`} viewBox='0 0 88 88' xmlns="http://www.w3.org/2000/svg"><path d="m0,12.402,35.687-4.8602,0.0156,34.423-35.67,0.20313zm35.67,33.529,0.0277,34.453-35.67-4.9041-0.002-29.78zm4.3261-39.025,47.318-6.906,0,41.527-47.318,0.37565zm47.329,39.349-0.0111,41.34-47.318-6.6784-0.0663-34.739z"/></svg>
 
 function Download() {
-  const [version, setVersion] = useState('0.0.0');
+  const [version, setVersion] = useState('0.5.1');
   useEffect(() => {
     axios.get<any>('https://cdn.lolgo.gg/desktop/version.json').then(res=>{
       setVersion(res.data.version);
