@@ -34,10 +34,12 @@ function PlayerInfo(props: {
   championId: number
   kdaInfo: EachKdaData,
   gold: number,
-  nickname: string
+  nickname: string,
+  level: number
+  isLevelUp: boolean
 }) {
   const {
-    itemData, championId, kdaInfo, gold, nickname
+    itemData, championId, kdaInfo, gold, nickname, level, isLevelUp
   } = props;
   const { normalList, trinketItem } = itemData;
   return (
@@ -47,6 +49,11 @@ function PlayerInfo(props: {
       <div className={styles.playerChampImg}>
         <div className={styles.playerChampImgInner}>
           <img src={getChampionImage(championId)} alt="" className={styles.playerChampImgImg} />
+        </div>
+        <div className={styles.playerChampLevelDiv}>
+          <div className={`${styles.playerChampLevelInner} ${isLevelUp?styles.playerChampLevelUp:''}`}>
+            <div className={styles.playerChampLevelText}>{level}</div>
+          </div>
         </div>
       </div>
       <div className={styles.playerOthers}>
@@ -87,6 +94,10 @@ function TeamInfo(props: {
   const { data, team, frame: tempFrame } = props;
   const frame = tempFrame === -1 ? data.totFrame : tempFrame;
   const isWin = team === data.win;
+  const getIsLevelUp = (frame:number, key:number) => {
+    if(frame<2) return false;
+    else return data.levelData[frame-1][key]!==data.levelData[frame][key]
+  }
   return (
     <div className={styles.fullDiv}>
       <div className={styles.teamDiv}>
@@ -105,7 +116,9 @@ function TeamInfo(props: {
                 championId={championId}
                 kdaInfo={data.kdaData[frame][key]}
                 gold={data.goldData[frame][key]}
+                level={data.levelData[frame][key]}
                 nickname={summonerName}
+                isLevelUp={getIsLevelUp(frame,key)}
               />
             );
           }
