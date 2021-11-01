@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# LOLGO_MainPage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![롤고 배경](https://user-images.githubusercontent.com/37856995/128962448-39fc7809-0127-4d36-a232-be0b46e72185.png)
 
-## Available Scripts
+리그 오브 레전드를 위한 챔피언 추천 프로그램, **LOLGO**
 
-In the project directory, you can run:
+[https://lolgo.gg](https://lolgo.gg)에서 서비스되는 LOLGO의 웹페이지 부분 레포지토리입니다.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 주요 스크린샷
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 메인 화면
 
-### `yarn test`
+![메인 화면](https://user-images.githubusercontent.com/37856995/139629595-36c0ca61-f6f2-4538-869a-416604acb7c9.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 내 매치 ID 찾기
 
-### `yarn build`
+![내 매치 ID 찾기](https://user-images.githubusercontent.com/37856995/139629604-be31de2c-39c7-43f1-bc61-2c21ff72f2c5.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 게임 분석
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![게임 분석](https://user-images.githubusercontent.com/37856995/139629608-2b231201-d432-465d-b00f-e39fb8dcf518.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 데스크탑 앱 다운로드
 
-### `yarn eject`
+![데스크탑 앱 다운로드](https://user-images.githubusercontent.com/37856995/139629610-cba51477-0c6c-4cb1-9ff9-8437ce6ec054.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 사용 프레임워크 / 라이브러리
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React](https://github.com/facebook/react)
+  - [axios](https://github.com/axios/axios)
+  - [react-loader-spiner](https://github.com/mhnpd/react-loader-spinner)
+---
 
-## Learn More
+## 실행 방법
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git clone https://git.swmgit.org/swm-12/12_swm16/lolgo_mainpage
+cd ./lolgo_mainpage
+npm install
+npm start
+```
