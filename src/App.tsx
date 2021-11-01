@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import FindMatchId from './Pages/FindMatchId.tsx/FindMatchId';
 import FindMatchIdResult from './Pages/FindMatchId.tsx/FindMatchIdResult';
 import Download from './Pages/Download/Download';
+import NewLoading from './Pages/NewLoading/NewLoading';
 
 function App() {
   return (
