@@ -41,7 +41,8 @@
   - [react-loader-spiner](https://github.com/mhnpd/react-loader-spinner)
 ---
 
-## 실행 방법
+## 실행 방법 (현재 작동 불가)
+### 현재 서버가 작동중이지 않아 사용할 수 없습니다.
 
 ```
 git clone https://git.swmgit.org/swm-12/12_swm16/lolgo_mainpage
